@@ -1,0 +1,79 @@
+<jittershader name="recolor from XYZ">
+    <description>
+    recolor an image based on the xyz values of the source
+    </description>
+
+    <param name="tex0" type="int" default="0"/>
+    <param name="tex1" type="int" default="1" />
+
+    <language name="glsl" version="1.2">
+        <bind param="tex0" program="fp"/>
+        <bind param="tex1" program="fp"/>
+        <program name="vp" type="vertex">
+<![CDATA[
+         
+#version 120
+         
+         varying vec2 texcoord0;
+         varying vec2 texcoord1;
+         varying vec2 texdim0;
+         varying vec2 texdim1;
+         
+         void main(void) {
+         
+         gl_Position = ftransform();
+         texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+         texcoord1 = vec2(gl_TextureMatrix[1] * gl_MultiTexCoord1);
+         texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+         texdim1 = vec2(abs(gl_TextureMatrix[1][0][0]), abs(gl_TextureMatrix[1][1][1]));
+         
+         }
+         
+         ]]>
+        </program>
+        <program name="fp" type="fragment">
+<![CDATA[
+   
+         varying vec2 texcoord0;
+         varying vec2 texcoord1;
+         varying vec2 texdim1;
+         
+         uniform sampler2DRect tex0;
+         uniform sampler2DRect tex1;
+         
+         void main(void) {
+         
+            //get the XYZ data from the source
+            vec4 srcPosIn = texture2DRect(tex0,texcoord0);
+         
+            //find the position in the xy plane
+            vec2 newColorCoord = vec2(srcPosIn.r, srcPosIn.g);
+         
+            //get the new color
+            vec4 newColor = texture2DRect(tex1, newColorCoord * texdim1);
+         
+            //modify dominant channel by z value
+            float skewValue = max(max(newColor.r, newColor.g), newColor.b);
+         
+            //assemble the final color
+            vec4 outColor = newColor;
+         /*
+            if(skewValue == newColor.r)
+            {
+                outColor = vec4(skewValue * srcPosIn.b, newColor.g, newColor.b, 1.0);
+            }
+            else if(skewValue == newColor.g) {
+                outColor = vec4(newColor.r, skewValue * srcPosIn.b, newColor.b, 1.0);
+            }
+            else {
+                outColor = vec4(newColor.r, newColor.g, skewValue * srcPosIn.b, 1.0);
+            }
+			*/
+         
+            //return the new color from the pallete
+            gl_FragColor = outColor;
+         }
+   ]]>
+        </program>
+    </language>
+</jittershader>
