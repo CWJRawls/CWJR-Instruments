@@ -2,8 +2,8 @@
 	"name" : "Recolor",
 	"version" : 1,
 	"creationdate" : -710518117,
-	"modificationdate" : -710485171,
-	"viewrect" : [ 197.0, 98.0, 300.0, 500.0 ],
+	"modificationdate" : -710429069,
+	"viewrect" : [ 58.0, 191.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -19,6 +19,15 @@
 		}
 ,
 		"media" : 		{
+			"monsoon_6.mov" : 			{
+				"kind" : "moviefile",
+				"local" : 1
+			}
+,
+			"psychedlic.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
 
 		}
 ,
@@ -34,6 +43,16 @@
 			}
 ,
 			"cwjr.palette.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.palette.nosat.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.smooth.gaussian.jxs" : 			{
 				"kind" : "shader",
 				"local" : 1
 			}
@@ -54,5 +73,6 @@
 	"amxdtype" : 1633771873,
 	"readonly" : 0,
 	"devpathtype" : 0,
-	"devpath" : "."
+	"devpath" : ".",
+	"sortmode" : 0
 }

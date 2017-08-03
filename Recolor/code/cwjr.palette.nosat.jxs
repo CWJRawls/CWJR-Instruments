@@ -1,0 +1,76 @@
+<jittershader name="palette-nosat">
+    <description>
+    Creates a palette from an input texture without saturating the colors
+    </description>
+    <param name="div" type="float" default="4.0" />
+    <param name="tex0" type="int" default="0" />
+
+    <language name="glsl" version="1.2">
+        <bind param="div" program="fp" />
+        <bind param="tex0" program="fp" />
+        <program name="vp" type="vertex">
+<![CDATA[
+
+    //setup to get positions in the texture for use in fragment
+    varying vec2 texdim0;
+    varying vec2 texcoord0;
+
+    void main(void) {
+        gl_Position = ftransform();
+        texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+        texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+    }
+]]>
+        </program>
+        <program name="fp" type="fragment">
+<![CDATA[
+
+    //the number of divisions in the texture gradient
+    uniform float div;
+
+    //references to the texture size and position of the current point
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    //texture input reference
+    uniform sampler2DRect tex0;
+
+    void main(void) {
+
+            //get the normalized size of each division in the x dimension of the texture
+            float xDivNormSize = 1.0 / div;
+            float xDivCellSize = floor(texdim0.x / div);
+         
+            //get the normalized position of the point
+            float xNorm = texcoord0.x / texdim0.x;
+            float yNorm = texcoord0.y / texdim0.y;
+         
+            //get which division the point falls into
+            float divNum = floor(xNorm / xDivNormSize);
+         
+            //get where inside the division the point is
+            float divPosition = xNorm - (divNum * xDivNormSize);
+         
+            //get the colors that the point is between
+            vec4 color0 = texture2DRect(tex0, vec2(floor((divNum * xDivNormSize) * texdim0.x), 0.0));
+            vec4 color1 = texture2DRect(tex0, vec2(floor(((divNum + 1.0) * xDivNormSize) * texdim0.x), 0.0));
+         
+            //get the change between colors
+            vec4 colorSlope = color1 - color0;
+         
+            //find the normalized position of the point within a single division
+            float xDivNormPosition = divPosition / xDivNormSize;
+         
+            //calculate the total shift from color0 that this point should be
+            vec3 totalShift = colorSlope.rgb * vec3(xDivNormPosition,xDivNormPosition,xDivNormPosition);
+         
+            //add the change to color0 to create the new color in the gradient
+            vec3 newColor = color0.rgb + totalShift;
+         
+            gl_FragColor = vec4(newColor.rgb, 1.0);
+    }
+
+]]>
+        </program>
+    </language>
+</jittershader>

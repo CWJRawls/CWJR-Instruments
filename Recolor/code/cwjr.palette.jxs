@@ -99,7 +99,7 @@
             vec3 newColor = color0.rgb + totalShift;
          
             //properly saturate the color based on the y position
-            vec3 saturatedColor = getSaturatedColor(newColor, yNorm);
+            vec3 saturatedColor = getSaturatedColor(newColor, (1.0 - yNorm));
          
             gl_FragColor = vec4(saturatedColor.rgb, 1.0);
          }
