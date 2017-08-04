@@ -2,7 +2,7 @@
 	"name" : "Recolor",
 	"version" : 1,
 	"creationdate" : -710518117,
-	"modificationdate" : -710429069,
+	"modificationdate" : -710270747,
 	"viewrect" : [ 58.0, 191.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -53,6 +53,11 @@
 			}
 ,
 			"cwjr.smooth.gaussian.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.gaussian.kernel.jxs" : 			{
 				"kind" : "shader",
 				"local" : 1
 			}
