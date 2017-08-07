@@ -2,8 +2,8 @@
 	"name" : "Recolor",
 	"version" : 1,
 	"creationdate" : -710518117,
-	"modificationdate" : -710084197,
-	"viewrect" : [ 58.0, 45.0, 300.0, 500.0 ],
+	"modificationdate" : -710013377,
+	"viewrect" : [ 2083.0, 93.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -12,6 +12,16 @@
 		"patchers" : 		{
 			"cwjr.recolor.maxpat" : 			{
 				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"sc.recolor.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"sc.recolor.maxhelp" : 			{
+				"kind" : "helpfile",
 				"local" : 1,
 				"toplevel" : 1
 			}
