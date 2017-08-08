@@ -2,7 +2,7 @@
 	"name" : "Gloves",
 	"version" : 1,
 	"creationdate" : -710003106,
-	"modificationdate" : -710001647,
+	"modificationdate" : -709925166,
 	"viewrect" : [ 2452.0, 119.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -35,6 +35,20 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"sc.gloves.receiver.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"sc.gloves.normalize.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+
+		}
+,
+		"externals" : 		{
 
 		}
 
