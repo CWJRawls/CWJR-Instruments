@@ -1,0 +1,60 @@
+<jittershader name="Color Modulation">
+    <param name="colorMod" type="vec3" default="1.0,1.0,1.0" >
+        <description>
+            The percentage of each channel to pass through to the output texture.
+        </description>
+    </param>
+
+    <param name="tex0" type="int" default="0" />
+
+    <language name="glsl" version="1.2">
+        <bind param="colorMod" program="fp" />
+        <bind param="tex0" program="fp" />
+
+        <program name="vp" type="vertex">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    void main(void) {
+
+        gl_Position = ftransform();
+
+        texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+        texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+    }
+
+]]>
+        </program>
+
+        <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    uniform sampler2DRect tex0;
+
+    uniform vec3 colorMod;
+
+    void main(void) {
+
+        vec4 mySample = texture2DRect(tex0, texcoord0);
+
+        vec3 myColor = vec3(mySample.rgb);
+
+        vec3 newColor = myColor * colorMod;
+
+        gl_FragColor = vec4(newColor.rgb, 1.0);
+
+    }
+
+]]>
+        </program>
+    </language>
+</jittershader>

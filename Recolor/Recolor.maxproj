@@ -2,8 +2,8 @@
 	"name" : "Recolor",
 	"version" : 1,
 	"creationdate" : -710518117,
-	"modificationdate" : -710012895,
-	"viewrect" : [ 2248.0, 88.0, 300.0, 500.0 ],
+	"modificationdate" : -709918060,
+	"viewrect" : [ 2146.0, 211.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -19,6 +19,16 @@
 				"kind" : "helpfile",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"sc.recolor.colormod.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"sc.recolor.colormod.maxhelp" : 			{
+				"kind" : "helpfile",
+				"local" : 1
 			}
 
 		}
@@ -68,6 +78,11 @@
 			}
 ,
 			"cwjr.brightness.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.recolor.colormod.jxs" : 			{
 				"kind" : "shader",
 				"local" : 1
 			}
