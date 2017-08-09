@@ -1,8 +1,8 @@
 {
 	"name" : "Shaders",
 	"version" : 1,
-	"creationdate" : -709883699,
-	"modificationdate" : -709882161,
+	"creationdate" : -709883820,
+	"modificationdate" : 3585133396,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -33,6 +33,21 @@
 ,
 		"code" : 		{
 			"cwjr.fold.mirror.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.video.tiles.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.warhol.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.color.flatten.jxs" : 			{
 				"kind" : "shader",
 				"local" : 1
 			}
