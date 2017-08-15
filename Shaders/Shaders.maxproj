@@ -2,8 +2,8 @@
 	"name" : "Shaders",
 	"version" : 1,
 	"creationdate" : -709883820,
-	"modificationdate" : 3585133396,
-	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
+	"modificationdate" : 3585574371,
+	"viewrect" : [ 2703.0, 309.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -48,6 +48,21 @@
 			}
 ,
 			"cwjr.color.flatten.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.color.stack.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.spiral.archimedes.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"cwjr.spiral.log.jxs" : 			{
 				"kind" : "shader",
 				"local" : 1
 			}
