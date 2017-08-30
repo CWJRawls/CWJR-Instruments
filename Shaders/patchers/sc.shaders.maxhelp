@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 2257.0, 89.0, 966.0, 480.0 ],
+		"rect" : [ 209.0, 89.0, 966.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -293,12 +293,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
-					"numoutlets" : 6,
-					"outlettype" : [ "", "", "", "", "", "" ],
-					"outputs" : 6,
+					"numoutlets" : 7,
+					"outlettype" : [ "", "", "", "", "", "", "" ],
+					"outputs" : 7,
 					"parameter_enable" : 0,
 					"patching_rect" : [ 219.0, 115.0, 39.0, 32.0 ],
 					"style" : ""
@@ -427,7 +426,7 @@
 									"time_secs" : [ 0.0 ],
 									"position" : [ 0.0 ],
 									"output_texture" : [ 0 ],
-									"vol" : [ 1.0 ],
+									"vol" : [ 0.0 ],
 									"rate" : [ 1.0 ],
 									"adapt" : [ 1 ],
 									"loopstart" : [ 0 ],
@@ -754,6 +753,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-8", 6 ]
 				}
 
 			}
