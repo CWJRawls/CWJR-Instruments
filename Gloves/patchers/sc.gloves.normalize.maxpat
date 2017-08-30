@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 2082.0, 79.0, 1372.0, 783.0 ],
+		"rect" : [ 512.0, 149.0, 544.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -3866,8 +3866,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "glove.finger.calibrator.maxpat",
-				"bootpath" : "~/Documents/Connor/GloveReceiver/GloveReceiver/patchers",
-				"patcherrelativepath" : "../../../../Connor/GloveReceiver/GloveReceiver/patchers",
+				"bootpath" : "~/Synthesis-master/CWJR-Instruments/Gloves/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
