@@ -96,7 +96,7 @@
 				"box" : 				{
 					"comment" : "Normalized Finger Data Out",
 					"id" : "obj-157",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -112,7 +112,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 473.0, 878.0, 62.0, 22.0 ],
+					"patching_rect" : [ 473.0, 878.0, 74.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-reset"
 				}
@@ -124,7 +124,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1352.0, 249.0, 88.0, 22.0 ],
+					"patching_rect" : [ 1352.0, 249.0, 100.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0-data-gate"
 				}
@@ -176,7 +176,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1295.0, 160.5, 126.0, 22.0 ],
+					"patching_rect" : [ 1295.0, 160.5, 138.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-calibration-status"
 				}
@@ -188,7 +188,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1111.75, 426.0, 103.0, 22.0 ],
+					"patching_rect" : [ 1111.75, 426.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0-to-normalize"
 				}
@@ -226,7 +226,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 400.0, 1144.0, 128.0, 22.0 ],
+					"patching_rect" : [ 400.0, 1144.0, 140.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0-calibration-status"
 				}
@@ -342,7 +342,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 500.0, 995.0, 100.0, 22.0 ],
+					"patching_rect" : [ 500.0, 995.0, 112.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0-open-status"
 				}
@@ -354,7 +354,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 400.0, 995.0, 89.0, 22.0 ],
+					"patching_rect" : [ 400.0, 995.0, 101.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0-fist-status"
 				}
@@ -392,7 +392,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1000.0, 105.0, 64.0, 22.0 ],
+					"patching_rect" : [ 1000.0, 105.0, 76.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0-reset"
 				}
@@ -405,7 +405,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 614.5, 673.0, 101.0, 22.0 ],
+					"patching_rect" : [ 614.5, 673.0, 113.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-to-normalize"
 				}
@@ -418,7 +418,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 8.0, 697.0, 101.0, 22.0 ],
+					"patching_rect" : [ 8.0, 697.0, 113.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-to-normalize"
 				}
@@ -430,7 +430,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 830.0, 249.0, 103.0, 22.0 ],
+					"patching_rect" : [ 830.0, 249.0, 115.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0-to-normalize"
 				}
@@ -456,7 +456,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1185.0, 15.0, 98.0, 22.0 ],
+					"patching_rect" : [ 1185.0, 15.0, 110.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-open-status"
 				}
@@ -482,7 +482,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1086.0, 19.0, 87.0, 22.0 ],
+					"patching_rect" : [ 1086.0, 19.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-fist-status"
 				}
@@ -596,7 +596,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 845.0, 193.0, 88.0, 22.0 ],
+					"patching_rect" : [ 845.0, 193.0, 100.0, 22.0 ],
 					"style" : "",
 					"text" : "s #0-data-gate"
 				}
@@ -1070,7 +1070,7 @@
 				"box" : 				{
 					"comment" : "Finger Data In (list) / Messages In",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1126,7 +1126,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 622.0, 853.0, 86.0, 22.0 ],
+					"patching_rect" : [ 622.0, 853.0, 98.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-data-gate"
 				}
@@ -1139,7 +1139,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 8.0, 862.0, 86.0, 22.0 ],
+					"patching_rect" : [ 8.0, 862.0, 98.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-data-gate"
 				}
@@ -2422,8 +2422,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-156", 0 ],
-					"midpoints" : [ 109.5, 921.0, 109.5, 921.0 ],
+					"destination" : [ "obj-156", 2 ],
+					"midpoints" : [ 109.5, 921.0, 130.5, 921.0 ],
 					"source" : [ "obj-135", 0 ]
 				}
 
@@ -2438,16 +2438,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-156", 2 ],
-					"midpoints" : [ 384.5, 948.0, 130.5, 948.0 ],
+					"destination" : [ "obj-156", 0 ],
+					"midpoints" : [ 384.5, 940.0, 109.5, 940.0 ],
 					"source" : [ "obj-137", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-156", 3 ],
-					"midpoints" : [ 740.5, 948.0, 141.0, 948.0 ],
+					"destination" : [ "obj-156", 4 ],
+					"midpoints" : [ 740.5, 954.0, 151.5, 954.0 ],
 					"source" : [ "obj-138", 0 ]
 				}
 
@@ -2468,16 +2468,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-156", 5 ],
-					"midpoints" : [ 878.5, 948.0, 162.0, 948.0 ],
+					"destination" : [ "obj-156", 3 ],
+					"midpoints" : [ 878.5, 953.0, 141.0, 953.0 ],
 					"source" : [ "obj-140", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-156", 4 ],
-					"midpoints" : [ 1016.5, 948.0, 151.5, 948.0 ],
+					"destination" : [ "obj-156", 5 ],
+					"midpoints" : [ 1016.5, 958.0, 162.0, 958.0 ],
 					"source" : [ "obj-141", 0 ]
 				}
 
@@ -3863,20 +3863,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "glove.finger.calibrator.maxpat",
-				"bootpath" : "~/Synthesis-master/CWJR-Instruments/Gloves/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "o.route.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
